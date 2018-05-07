@@ -1,20 +1,21 @@
 <template lang="pug">
-  div.company-listing
-    h1 Companies
-    input(v-model="text")
-    button(@click="PUSH_NOTIFICATION(text)") Notify {{ text }}
+  .page
+    h1 Welcome to Deals Tracker
+    p This microapp allows you to see the deals and prices available at a given location.
+    h2 Favorites:
+
+    ul
+      li(v-for="favorite in favorites")
+        router-link(:to="`/companies/${favorite.id}`") {{ favorite.name }}
+
 </template>
 
 <script>
-import { mapActions } from 'vuex'
-import { PUSH_NOTIFICATION } from '@/models/notifications'
+import { favorites } from '../config.yml'
 
 export default {
-  data () {
-    return {
-      text: 'Stuff to Notify'
-    }
+  computed: {
+    favorites () { return favorites }
   },
-  methods: mapActions([PUSH_NOTIFICATION]),
 }
 </script>

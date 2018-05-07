@@ -10,6 +10,33 @@ body {
   overflow: auto;
 }
 
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+.fright {
+  float: right;
+}
+
+.page {
+  padding: $padding-large;
+
+  h1,
+  h2 {
+    margin: $padding-large 0;
+  }
+}
+
 pre {
   padding: $padding-default;
 }

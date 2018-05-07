@@ -1,2 +1,6 @@
 api:
   base: https://www.mytime.com/api/mkp/v1
+
+favorites:
+  - id: 40426
+    name: Test - Joe Smith Hair
